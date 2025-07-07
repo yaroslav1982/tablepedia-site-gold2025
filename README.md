@@ -15,8 +15,8 @@ About the site (The concept of a microsite with TXT files)
 
 4. The main page allows a minimum number of images (pictures).
 
- If you are interested in a specific website that meets the concept of a microsite, I suggest you visit http://tablepedia.com/deti
+ If you are interested in a specific website that meets the concept of a microsite, I suggest you visit https://tablepedia.com/gold2025-en/
 
-Constructive criticism is welcome. Please let us know how you feel about the concept of a microsite, what points you disagree with, and how you think the website http://tablepedia.com/deti aligns with the described concept. 
+Constructive criticism is welcome. Please let us know how you feel about the concept of a microsite, what points you disagree with, and how you think the website https://tablepedia.com/gold2025-en/ aligns with the described concept. 
 
  We also welcome links to various website concepts that are suitable for individual developers.
