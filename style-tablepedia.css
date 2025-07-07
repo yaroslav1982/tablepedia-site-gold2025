@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+	  font-family: Arial;
+	  color: #000;
+    list-style-type: none;
+}
+
+body {
+    position: relative;
+    background-color: rgb(245, 245, 245);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+}
+
+.header {
+    padding: 20px 0 15px;
+}
+
+.header__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header__subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header__info {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    background-color: #edf6ff;
+    color: #1b4268;
+    border: 1px solid #d4dde5;
+    padding: 10px 3%;
+    border-radius: 20px;
+}
+.navigations {
+    margin-bottom: 15px;
+}
+
+.header__qr {
+    display: block;
+    width: 65px;
+    height: auto;
+}
+
+.header__meta {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+}
+
+.header__link {
+    color:#0252aa;
+}
+
+.header__link:hover {
+    color:#023f80;
+    text-decoration: underline;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.header__menu-link {
+    color:#0252aa;
+}
+
+.header__menu-link:hover {
+    color:#023f80;
+    text-decoration: underline;
+}
+
+.header__menu-link::before {
+    content: " ";
+}
+
+.header__menu-link::after {
+    content: " ";
+}
+
+.header__menu-item:not(:last-child)::after {
+    content: " ";
+    margin-left: 8px;
+    margin-right: 4px;
+    color: #000;
+}
+
+@media (max-width: 400px) {
+    .header__info {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .header__qr {
+        margin-bottom: 15px;
+    }
+}
+
+.promo {
+    margin-bottom: 30px;
+}
+
+.promo__date {
+    width: fit-content;
+    display: block;
+    font-size: 14px;
+    background-color: #d5eaff;
+    border: 1px solid #d4dde5;
+    color: #8b3030;
+    padding: 4px 8px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.promo__title {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #edf6ff;
+    color: #1b4268;
+    border: 1px solid #d4dde5;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.promo__content {
+    border: 1px solid #d4dde5;
+    padding: 3%;
+    border-radius: 20px;
+}
+
+.promo__list-item {
+    margin-bottom: 20px;
+}
+
+.promo__list-item:last-child {
+    margin-bottom: 0;
+}
+
+.promo__link {
+    color:#0252aa;
+}
+
+.promo__link:hover {
+    color:#023f80;
+    text-decoration: underline;
+}
+
+.footer {
+    padding: 20px 0 30px;
+}
+
+.footer__title {
+    width: fit-content;
+    display: block;
+    font-size: 14px;
+    background-color: #d5eaff;
+    border: 1px solid #d4dde5;
+    color: #8b3030;
+    padding: 4px 8px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.footer__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #edf6ff;
+    color: #1b4268;
+    border: 1px solid #d4dde5;
+    padding: 10px 3%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.footer__group:last-child {
+    margin-bottom: 0;
+}
+
+.footer__group p {
+    font-weight: bold;
+}
+
+.footer__group a {
+    color:#0252aa;
+}
+
+.footer__group a:hover {
+    color:#023f80;
+    text-decoration: underline;
+}
+
+
+
+
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.graf-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-selects {
+    margin-bottom: 10px;
+}
+
+.card-selects select {
+    flex: 1;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-weight: 600;
+    height: 30px;
+}
+
+@media (max-width: 700px) {
+    .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

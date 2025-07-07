@@ -1,0 +1,597 @@
+﻿
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+		<title>Data visualization</title>
+		<meta name="description" content="Visualization of the minimum and maximum values of gold, silver, platinum, and palladium">
+		<meta name="author" content="Yaroslav Solyanikov">
+
+		<!-- Open Graph for social networks -->
+		<meta property="og:title" content="Data visualization | Tablepedia">
+		<meta property="og:description" content="Visualization of the minimum and maximum values of gold, silver, platinum, and palladium">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://tablepedia.com">
+		<meta property="og:image" content="http://tablepedia.com/tablepedia2.png"> 
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<!-- Styles -->
+		<link rel="stylesheet" href="style-tablepedia.css">
+
+		<!-- Support for old IE -->
+		<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<script src="population-2024.js"></script>
+
+	<body>
+		<header class="header">
+			<div class="container">
+				<h1 class="header__title">Data visualization</h1>
+				<p class="header__subtitle"><i>Plotting graphs from tabular data</i></p>
+
+				<div class="header__info">
+					<img src="tablepedia-simple.png" class="header__qr" alt="QR-code for site"> 
+					<div class="header__meta">
+						<a href="http://www.tablepedia.com/gold2025" class="header__link">http://www.tablepedia.com/gold2025</a>
+						<p class="header__tags">#tablepedia #microsite #gold2025</p>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="promo">
+				<div class="container">
+					<nav class="header__info navigations">
+						<a class="header__menu-link" href="about.txt">About microsite</a>
+						<a class="header__menu-link" href="privacy_policy.txt">Privacy policy</a>
+					</nav>
+
+					<textarea style="display: block;margin: 0 auto;" class="input_type" id="target" name="target" cols="70" rows="10"  wrap="off">
+Year	G-min	G-max	S-min	S-max	P-min	P-max	Pal-min	Pal-max	N1	N2
+2025	2689	3432	29.58	37	898	1394	902	1140	0	0
+2024	2013	2747	22.62	33.72	874	1085	859	1198	0	0
+2023	1810	2071	20.53	25.66	840	1136	946	1797	0	0
+2022	1644	1988	18.06	25.88	818	1129	1694	2975	0	0
+2021	1703	1903	22.18	27.93	927	1276	1743	2941	0	0
+2020	1481	2035	12.42	28.30	607	1072	1593	2786	0	0
+2019	1277	1526	14.472	18.32	794	937	1266	1926	0	0
+2018	1188	1349	14	17.23	778	1008	889	1267	0	0
+2017	1159	1327	15.66	18.42	893	1019	710	1025	0	0
+2016	1074	1355	13.87	20.45	819	1183	474	752	0	0
+2015	1069	1285	13.95	17.54	835	1287	539	831	0	0
+2014	1162	1346	15.17	21.43	1182	1517	703	883	0	0
+2013	1192	1689	18.99	31.78	1332	1699	665	784	0	0
+2012	1556	1776	27.04	34.93	1400	1701	576	717	0	0
+2011	1335	1888	28.05	45.07	1433	1906	584	830	0	0
+2010	1075	1406	15.3	29.21	1496	1739	409	745	0	0
+2009	829	1190	10.94	18.54	947	1487	185	384	0	0
+2008	731	976	9.12	20.12	790	2242	175	586	0	0
+2007	612	829	11.79	15.2	1144	1518	331	388	0	0
+2006	519	701	8.91	14.62	982	1285	270	390	0	0
+2005	414	539	6.39	9.11	847	1018	179	292	0	0
+2004	378	451	5.52	8.07	763	936	184	337	0	0
+2003	326	409	4.39	5.67	596	811	153	269	0	0
+2002	278	347	4.21	5.04	450	596	230	439	0	0
+2001	258	296	4.06	4.76	411	637	317	1075	0	0
+2000	265	311	4.57	5.37	399	614	442	938	0	0
+1999	253	319	4.91	5.66	343	427	296	441	0	0
+1998	277	310	4.7	7.03	337	424	203	350	0	0
+1997	283	368	4.29	6.05	353	442	123	222	0	0
+1996	368	406	4.72	5.71	372	430	117	143	0	0
+1995	374	394	4.52	5.8	404	451	132	175	0	0
+1994	372	395	4.72	5.76	388	430	123	161	0	0
+1993	327	409	3.56	5.51	338	423	98	144	0	0
+1992	333	358	3.71	4.27	339	390	81	106	0	0
+1991	348	390	3.69	4.55	340	417	80	100	0	0
+1990	350	420	4.08	5.34	412	534	89	138	0	0
+1989	358	417	5.04	6.18	475	556	129	175	0	0
+1988	397	482	6.02	7.78	456	623	116	134	0	0
+1987	399	492	5.41	9.12	477	635	107	148	0	0
+1986	327	435	4.87	6.14	347	626	96	146	0	0
+1985	287	334	5.66	6.7	243	351	91	131	0	0
+1984	308	396	6.26	9.68	286	416	124	165	0	0
+1983	374	509	8.47	14.26	382	489	94	168	0	0
+1982	297	453	5.36	10.38	244	382	50	86	0	0
+1981	393	586	8.53	16.86	378	604	66	143	0	0
+1980	490	835	12.92	49.74	546	960	147	308	0	0
+1979	221	472	6	19.42	336	619	72	166	0	0
+1978	166	239	4.66	6.17	192	381	54	81	0	0
+1977	132	166	4.26	4.89	147	184	43	58	0	0
+1976	104	140	3.95	4.93	136	184	50	51	0	0
+1975	138	195	4.02	5.03	143	180	51	89	0	0
+1974	112	188	3.18	5.96	161	279	90	130	0	0
+1973	65	127	1.96	3.12	137	180	80	128	0	0
+1972	44	68	1.4	1.92	98	160	42	78	0	0
+1971	37	44	1.31	1.67	99	124	38	42	0	0
+1970	35	39	1.55	1.91	116	189	37	38	0	0
+1969	35	44	1.82	1.97	153	253	38	42	0	0
+1968	37	42	1.97	2.05	227	270	42	45	0	0
+1967	35	37	1.3	2.06	111	248	38	45	0	0
+1966	35	35	1.3	1.3	100	110	34	38	0	0
+1965	35	35	1.3	1.3	99	100	33	34	0	0
+1964	35	35	1.3	1.3	90	99	31	33	0	0
+1963	35	35	1.2	1.3	82	90	26	31	0	0
+1962	35	35	1.2	1.2	82	83	25	25	0	0
+1961	35	35	1	1.04	83	83	25	25	0	0
+1960	35	35	0.95	1	82	83	25	25	0	0
+1959	35	35	0.94	0.95	72	82	19	25	0	0
+1958	35	35	0.88	0.94	66	72	17	19	0	0
+1957	35	35	0.88	0.88	67	90	17	23	0	0
+1956	35	35	0.88	0.93	90	105	24	24	0	0
+1955	35	35	0.88	0.93	94	104	22	24	0	0
+1954	35	35	0.88	0.88	88	94	21	22	0	0
+1953	35	35	0.88	0.88	89	93	21	24	0	0
+1952	35	35	0.83	0.88	93	93	24	24	0	0
+1951	35	35	0.82	0.87	92	93	24	24	0	0
+1950	35	35	0.83	0.88	76	91	24	24	0	0
+1949	35	35	0.77	0.83	75	76	24	24	0	0
+1948	35	35	0.7	0.76	75	92	24	24	0	0
+1947	35	35	0.71	0.75	62	91	24	24	0	0
+1946	35	35	0.76	0.88	53	62	24	24	0	0
+1945	34	35	0.73	0.86	35	52	24	24	0	0
+1944	34	34	0.47	0.72	35	35	24	24	0	0
+1943	34	34	0.47	0.47	35	35	24	24	0	0
+1942	34	34	0.47	0.47	35	36	24	24	0	0
+1941	33	34	0.37	0.47	36	36	24	24	0	0
+1940	32	33	0.35	0.37	36	36	24	24	0	0
+1939	33	35	0.35	0.36	36	36	23	24	0	0
+1938	35	35	0.36	0.4	34	36	23	23	0	0
+1937	35	35	0.41	0.41	35	46	23	23	0	0
+1936	35	35	0.41	0.46	42	46	23	23	0	0
+1935	35	35	0.46	0.58	33	41	23	23	0	0
+1934	30	35	0.54	0.58	33	34	23	23	0	0
+1933	24	30	0.41	0.53	31	34	18	23	0	0
+1932	20	23	0.27	0.41	31	32	18	18	0	0
+1931	19	20	0.23	0.29	32	32	18	18	0	0
+1930	20	21	0.29	0.36	33	44	18	24	0	0
+1929	21	21	0.37	0.46	45	68	24	39	0	0
+1928	21	21	0.46	0.58	68	78	40	45	0	0
+1927	21	21	0.58	0.58	78	85	46	57	0	0
+1926	21	21	0.53	0.58	86	113	58	70	0	0
+1925	21	21	0.54	0.67	113	119	70	79	0	0
+1924	21	21	0.68	0.7	118	119	79	93	0	0
+1923	21	21	0.65	0.7	117	118	62	92	0	0
+1922	21	21	0.64	0.65	98	117	60	61	0	0
+1921	21	21	0.64	0.64	76	97	59	60	0	0
+1920	20	21	0.64	0.64	79	110	59	106	0	0
+1919	20	20	0.64	1.34	111	115	108	130	0	0
+1918	20	20	1.03	1.31	106	115	130	134	0	0
+1917	20	20	0.87	1.02	103	106	110	134	0	0
+1916	20	20	0.78	0.87	83	102	67	109	0	0
+1915	20	21	0.58	0.77	48	81	56	66	0	0
+1914	21	21	0.54	0.58	45	47	44	56	0	0
+1913	21	21	0.53	0.58	45	45	45	50	0	0
+1912	21	21	0.58	0.63	45	45	50	55	0	0
+1911	21	21	0.59	0.64	43	45	55	55	0	0
+1910	21	21	0.53	0.59	34	43	55	55	0	0
+1909	21	21	0.53	0.53	25	34	55	55	0	0
+1908	21	21	0.47	0.53	21	25	55	55	0	0
+1907	21	21	0.47	0.52	21	28	55	55	0	0
+1906	21	21	0.52	0.7	28	28	55	55	0	0
+1905	20	21	0.65	0.7	17	27	55	55	0	0
+1904	20	20	0.59	0.65	18	21	55	55	0	0
+1903	20	20	0.58	0.58	19	21	55	55	0	0
+1902	20	20	0.48	0.58	19	20	55	55	0	0
+1901	20	20	0.47	0.59	20	20	55	55	0	0
+1900	20	20	0.59	0.64	20	20	55	55	0	0
+					</textarea>
+
+		<textarea id="inputTextToSave1" style="display:none">1</textarea>
+		<textarea id="inputTextToSave2" style="display:none">2</textarea>
+
+
+					<p style="margin-bottom: 15px; text-align: center;">05.07.2025 #tablepedia #microsite #gold2025</p>
+					<h2 class="promo__title">Price of precious metals, $/troy ounce</h2>
+
+					<div class="promo__content">
+						<ul class="promo__list">
+							<h3 style="margin-bottom: 15px;">The blue and red numbers correspond to the metal's value. 
+<br> The color of the metal corresponds to the color of the line.
+</h3>
+
+
+
+<script>
+
+
+    var Xft10 = fitRange1(1960, 2025, 10);
+
+var Xft200 = NUMBERseries(Xft10);
+
+//alert(Xft200);
+
+var FromToX = Xft200; //"1960;1980;1990;2000;2010;2020";
+
+var gmin="Gold-min1234";
+var gmax="Gold-max1234";
+
+var arrSelect = ["SELECT METAL", "Gold-min", "Gold-max", "Silver-min", "Silver-max", "Platinum-min", "Platinum-max", "Palladium-min", "Palladium-max"]; // Minimum y values for corresponding x-values
+
+var text1="0;0;0;0;0;0;0;0;0;0;0";
+var text2="0;4000;4000;50;50;4000;4000;4000;4000;0;0";
+
+document.write("<div class=\"card-wrapper\">");
+document.write("   <div class=\"graf-card\">");
+document.write("   <div class=\"card-selects\">");
+
+//1
+document.write("    <SELECT name=\"test1980\" id=\"test1980\" onchange=\"var qwT1=document.getElementById('test1980').value; var qwT2=document.getElementById('test2000').value; ViewLog(qwT1, qwT2); PLOTbuild('boldStuff', 'select11', 'select12', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+"SELECT YEAR"+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1900; i < 2030; i=i+10) {
+  let newOption = new Option(i,i);
+  test1980.append(newOption);
+    }
+newOption = new Option(2025,2025);
+  test1980.append(newOption);
+
+document.write("    <SELECT name=\"test2000\" id=\"test2000\" onchange=\"var qwT1=document.getElementById('test1980').value; var qwT2=document.getElementById('test2000').value; ViewLog(qwT1, qwT2); PLOTbuild('boldStuff', 'select11', 'select12', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+"SELECT YEAR"+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1900; i < 2030; i=i+10) {
+  let newOption = new Option(i,i);
+  test2000.append(newOption);
+    }
+newOption = new Option(2025,2025);
+  test2000.append(newOption);
+
+//document.write("<input type=\"button\" id=\"bTime1\" class=\"c-button\" value=\"Change time interval\" onclick=\"var qwT1=document.getElementById('test1980').value; var qwT2=document.getElementById('test2000').value; ViewLog(qwT1, qwT2); PLOTbuild('boldStuff', 'select11', 'select12', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+//2
+document.write("    <br><SELECT name=\"select11\" id=\"select11\" width=\"100\" onchange=\"PLOTbuild('boldStuff', 'select11', 'select12', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+arrSelect[0]+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1; i < 9; i++) {
+  let newOption = new Option(arrSelect[i],i);
+  select11.append(newOption);
+    }
+
+document.write("    <SELECT name=\"select12\" id=\"select12\" onchange=\"PLOTbuild('boldStuff', 'select11', 'select12', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+arrSelect[0]+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1; i < 9; i++) {
+  let newOption = new Option(arrSelect[i],i);
+  select12.append(newOption);
+    }
+
+
+
+document.write("   </div>");
+document.write(" ");
+document.write("   <b id=\"boldStuff\" style=\"color:transparent;\">SVG</b>");
+document.write("   </div>");
+document.write(" ");
+document.write("   <div class=\"graf-card\">");
+document.write("   <div class=\"card-selects\">");
+
+//1
+document.write("    <SELECT name=\"test1982\" id=\"test1982\" onchange=\"var qwT1=document.getElementById('test1982').value; var qwT2=document.getElementById('test2002').value; ViewLog(qwT1, qwT2); PLOTbuild('boldStuff2', 'select21', 'select22', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+"SELECT YEAR"+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1900; i < 2030; i=i+10) {
+  let newOption = new Option(i,i);
+  test1982.append(newOption);
+    }
+newOption = new Option(2025,2025);
+  test1982.append(newOption);
+
+document.write("    <SELECT name=\"test2002\" id=\"test2002\" onchange=\"var qwT1=document.getElementById('test1982').value; var qwT2=document.getElementById('test2002').value; ViewLog(qwT1, qwT2); PLOTbuild('boldStuff2', 'select21', 'select22', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+"SELECT YEAR"+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1900; i < 2030; i=i+10) {
+  let newOption = new Option(i,i);
+  test2002.append(newOption);
+    }
+newOption = new Option(2025,2025);
+  test2002.append(newOption);
+
+//document.write("<input type=\"button\" id=\"bTime2\" class=\"c-button\" value=\"Change time interval\" onclick=\"var qwT1=document.getElementById('test1982').value; var qwT2=document.getElementById('test2002').value; ViewLog(qwT1, qwT2); PLOTbuild('boldStuff2', 'select21', 'select22', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+//2
+document.write("    <br><SELECT name=\"select21\" id=\"select21\" onchange=\"PLOTbuild('boldStuff2', 'select21', 'select22', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+arrSelect[0]+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1; i < 9; i++) {
+  let newOption = new Option(arrSelect[i],i);
+  select21.append(newOption);
+    }
+document.write("    ");
+document.write("    <SELECT name=\"select22\" id=\"select22\" onchange=\"PLOTbuild('boldStuff2', 'select21', 'select22', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+arrSelect[0]+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1; i < 9; i++) {
+  let newOption = new Option(arrSelect[i],i);
+  select22.append(newOption);
+    }
+
+document.write("   </div>");
+document.write("   <b id=\"boldStuff2\" style=\"color:transparent;\">SVG</b>");
+document.write("   </div>");
+document.write(" ");
+document.write("   <div class=\"graf-card\">");
+
+
+document.write(" ");
+
+
+document.write("   <b id=\"boldStuff3\" style=\"color:transparent;\">SVG</b>");
+
+
+document.write("   <div class=\"card-selects\">");
+
+
+document.write("    <SELECT name=\"test1983\" id=\"test1983\" onchange=\"var qwT1=document.getElementById('test1983').value; var qwT2=document.getElementById('test2003').value; ViewLog(qwT1, qwT2); PLOTbuild('boldStuff3', 'select31', 'select32', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+"SELECT YEAR"+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1900; i < 2030; i=i+10) {
+  let newOption = new Option(i,i);
+  test1983.append(newOption);
+    }
+newOption = new Option(2025,2025);
+  test1983.append(newOption);
+
+document.write("    <SELECT name=\"test2003\" id=\"test2003\" onchange=\"var qwT1=document.getElementById('test1983').value; var qwT2=document.getElementById('test2003').value; ViewLog(qwT1, qwT2); PLOTbuild('boldStuff3', 'select31', 'select32', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+"SELECT YEAR"+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1900; i < 2030; i=i+10) {
+  let newOption = new Option(i,i);
+  test2003.append(newOption);
+    }
+newOption = new Option(2025,2025);
+  test2003.append(newOption);
+
+///document.write("<input type=\"button\" id=\"bTime3\" class=\"c-button\" value=\"Change time interval\" onclick=\"var qwT1=document.getElementById('test1983').value; var qwT2=document.getElementById('test2003').value; ViewLog(qwT1, qwT2); PLOTbuild('boldStuff3', 'select31', 'select32', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+
+document.write("    <br><SELECT name=\"select31\" id=\"select31\" width=\"100\" onchange=\"PLOTbuild('boldStuff3', 'select31', 'select32', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+arrSelect[0]+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1; i < 9; i++) {
+  let newOption = new Option(arrSelect[i],i);
+  select31.append(newOption);
+    }
+document.write("    <SELECT name=\"select32\" id=\"select32\" onchange=\"PLOTbuild('boldStuff3', 'select31', 'select32', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+arrSelect[0]+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1; i < 9; i++) {
+  let newOption = new Option(arrSelect[i],i);
+  select32.append(newOption);
+    }
+
+document.write("   </div>");
+
+
+
+document.write("   </div>");
+document.write(" ");
+
+document.write("   <div class=\"graf-card\">");
+document.write("   <b id=\"boldStuff4\" style=\"color:transparent;\">SVG</b>");
+
+
+document.write("   <div class=\"card-selects\">");
+document.write("    <SELECT name=\"test1984\" id=\"test1984\" onchange=\"var qwT1=document.getElementById('test1984').value; var qwT2=document.getElementById('test2004').value; ViewLog(qwT1, qwT2); PLOTbuild('boldStuff4', 'select41', 'select42', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+"SELECT YEAR"+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1900; i < 2030; i=i+10) {
+  let newOption = new Option(i,i);
+  test1984.append(newOption);
+    }
+newOption = new Option(2025,2025);
+  test1984.append(newOption);
+
+document.write("    <SELECT name=\"test2004\" id=\"test2004\" onchange=\"var qwT1=document.getElementById('test1984').value; var qwT2=document.getElementById('test2004').value; ViewLog(qwT1, qwT2); PLOTbuild('boldStuff4', 'select41', 'select42', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+"SELECT YEAR"+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1900; i < 2030; i=i+10) {
+  let newOption = new Option(i,i);
+  test2004.append(newOption);
+    }
+newOption = new Option(2025,2025);
+  test2004.append(newOption);
+
+//document.write("<input type=\"button\" id=\"bTime4\" class=\"c-button\" value=\"Change time interval\" onclick=\"var qwT1=document.getElementById('test1984').value; var qwT2=document.getElementById('test2004').value; ViewLog(qwT1, qwT2); PLOTbuild('boldStuff4', 'select41', 'select42', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+
+
+document.write("    <br><SELECT name=\"select41\" id=\"select41\" onchange=\"PLOTbuild('boldStuff4', 'select41', 'select42', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+arrSelect[0]+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1; i < 9; i++) {
+  let newOption = new Option(arrSelect[i],i);
+  select41.append(newOption);
+    }
+document.write("    ");
+document.write("    <SELECT name=\"select42\" id=\"select42\" onchange=\"PLOTbuild('boldStuff4', 'select41', 'select42', '"+FromToX+"', '"+text1+"', '"+text2+"')\">");
+document.write("    <OPTION SELECTED VALUE=\"0\">"+arrSelect[0]+"</OPTION>");
+document.write("    </SELECT>");
+    for (let i = 1; i < 9; i++) {
+  let newOption = new Option(arrSelect[i],i);
+  select42.append(newOption);
+    }
+document.write("   </div>");
+
+
+document.write("   </div>");
+
+
+
+
+
+
+document.write("   </div>");
+
+			document.getElementById("test1980").value = '1960';  
+			document.getElementById("test2000").value = '2025';   
+
+			document.getElementById("test1982").value = '1960';  
+			document.getElementById("test2002").value = '2025';   
+
+			document.getElementById("test1983").value = '1960';  
+			document.getElementById("test2003").value = '2025';   
+
+			document.getElementById("test1984").value = '1960';  
+			document.getElementById("test2004").value = '2025';   
+
+			document.getElementById("select11").value = '1';
+			document.getElementById("select12").value = '2';
+			PLOTbuild('boldStuff', 'select11', 'select12', FromToX, text1, text2);
+
+			document.getElementById("select21").value = '3';  
+			document.getElementById("select22").value = '4';   
+			PLOTbuild('boldStuff2', 'select21', 'select22', FromToX, text1, text2);
+
+			document.getElementById("select31").value = '5'; 
+			document.getElementById("select32").value = '6'; 
+			PLOTbuild('boldStuff3', 'select31', 'select32', FromToX, text1, text2);
+
+			document.getElementById("select41").value = '7';  
+			document.getElementById("select42").value = '8';   
+			PLOTbuild('boldStuff4', 'select41', 'select42', FromToX, text1, text2);
+
+var qw12=document.getElementById("tTime");
+//alert(qw12);
+document.getElementById("tTime")="qw";
+
+function ViewLog(qwT1, qwT2)
+	{
+
+//var qwT=document.getElementById("test1980").value+";"+document.getElementById("test2000").value
+
+///var qwT1=document.getElementById("test1980").value;
+///var qwT2=document.getElementById("test2000").value;
+
+//alert(qwT1);
+
+var i1980=parseFloat(qwT1);
+var i2000=parseFloat(qwT2);
+
+
+if ((i1980==0)||(i2000==0)){return;}
+
+
+var iSw=i1980;
+if (i1980>i2000) {i1980=i2000; i2000=iSw;}
+
+    var XftN = fitRange1(i1980, i2000, 10);
+
+var XftN2 = NUMBERseries(XftN);
+
+
+//var qw12=document.getElementById("inputTextToSave1").value;
+//alert(qw12);
+document.getElementById("inputTextToSave1").value=XftN2; //qwT; //"qwazx";
+
+FromToX=XftN2;
+
+
+    const targ = document.getElementById('target').value;
+    const tableStringsT = targ.split("\n");
+
+//alert(tableStringsT);
+
+var Gmax=0;
+var Smax=0;
+var Pmax=0;
+var PALLAmax=0;
+
+var Gtemp=0;
+var Stemp=0;
+var Ptemp=0;
+var PALLAtemp=0;
+
+var Ttemp=0;
+
+    let SIMPLEpoly = tableStringsT.slice(1, -1).map(row => {
+        const elements = row.split("\t");
+        //const sTemp = `${elements[0]};${elements[ycol]}`;
+        const sTemp = `${elements[0]};${elements[1]}`;
+        Ttemp = parseFloat(elements[0]);
+        Gtemp = parseFloat(elements[2]);
+        Stemp = parseFloat(elements[4]);
+        Ptemp = parseFloat(elements[6]);
+        PALLAtemp = parseFloat(elements[8]);
+
+if (((Ttemp<i2000)||(Ttemp==i2000))&&((Ttemp>i1980)||(Ttemp==i1980))){
+	if (Gmax<Gtemp) {Gmax=Gtemp;}
+	if (Smax<Stemp) {Smax=Stemp;}
+	if (Pmax<Ptemp) {Pmax=Ptemp;}
+	if (PALLAmax<PALLAtemp) {PALLAmax=PALLAtemp;}
+}
+        //return convert2ValuesTo2Coordinates(sTemp, x1, x2, y1, y2, h1, h2, v1, v2);
+        return sTemp;
+    }).join('\n').replace(/;/g, ',');
+
+SIMPLEpoly =`${0};${Gmax};${Gmax};${Smax};${Smax};${Pmax};${Pmax};${PALLAmax};${PALLAmax}`;
+
+//alert(SIMPLEpoly);
+
+document.getElementById("inputTextToSave2").value=SIMPLEpoly;
+
+}
+</script>
+
+
+
+
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				Contacts:
+				<address class="footer__group">
+					<p>Yaroslav Solyanikov</p>
+					<p>E-mail: <a href="mailto:yaroslav1982@mail.ru">yaroslav1982@mail.ru</a></p>
+					<p>Phone: <a href="tel:+79644597661">+79644597661</a> (only Telegram and WhatsApp)</p>
+				</address>
+				Links:
+				<div class="footer__group">
+					<p>Github: <a target="_blank" rel="noopener noreferrer" href="https://github.com/yaroslav1982/tablepedia.com">tablepedia.com</a></p>
+					<p>Pikabu: <a target="_blank" rel="noopener noreferrer" href="https://pikabu.ru/@tablepedia">https://pikabu.ru/@tablepedia</a></p>
+					<p>Telegram: <a target="_blank" rel="noopener noreferrer" href="https://t.me/s/tablepedia">https://t.me/s/tablepedia</a></p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+		</script>
+
+	<!-- Yandex.Metrika counter -->
+		<script>
+			(function (d, w, c) {
+				(w[c] = w[c] || []).push(function() {
+					try {
+						w.yaCounter42436314 = new Ya.Metrika({
+							id:42436314,
+							clickmap:true,
+							trackLinks:true,
+							accurateTrackBounce:true
+						});
+					} catch(e) { }
+				});
+
+				var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function () { n.parentNode.insertBefore(s, n); };
+				s.type = "text/javascript";
+				s.async = true;
+				s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+				if (w.opera == "[object Opera]") {
+					d.addEventListener("DOMContentLoaded", f, false);
+				} else { f(); }
+			})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/42436314" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+	</body>
+</html>
